@@ -3,29 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Ngô Hữu Phúc</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Trang chủ - Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #212121; line-height: 1.6; }
+        
+        /* Thanh điều hướng (Menu) */
+        .top-bar { background-color: #1c1c1c; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
+        .top-bar .brand { color: #ffffff; font-size: 16px; font-weight: bold; }
+        .top-bar .nav-links a { color: #cccccc; text-decoration: none; margin-left: 20px; font-size: 15px; transition: color 0.2s; }
+        .top-bar .nav-links a:hover, .top-bar .nav-links a.active { color: #ffffff; font-weight: bold; }
+        
+        /* Banner */
+        .hero-banner { background: linear-gradient(135deg, #2b6cb0 0%, #1565c0 40%, #0d47a1 60%, #072a60 100%); height: 250px; display: flex; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; }
+        .hero-banner h1 { color: #ffffff; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 72px; font-weight: normal; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); z-index: 1; }
+        
+        /* Nội dung chính */
+        .profile-container { max-width: 1000px; margin: 50px auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; justify-content: center; }
+        .profile-photo { flex: 0 0 350px; }
+        .profile-photo img { width: 100%; height: auto; display: block; }
+        .profile-details { flex: 1; min-width: 350px; padding-top: 15px; }
+        .profile-details ul { list-style: none; }
+        .profile-details li { font-size: 16px; margin-bottom: 15px; color: #222222; }
+        .profile-details a { color: #0d47a1; text-decoration: none; }
+        .profile-details a:hover { text-decoration: underline; }
+        
+        @media (max-width: 768px) {
+            .hero-banner h1 { font-size: 48px; }
+            .profile-container { flex-direction: column; align-items: center; }
+            .profile-photo { flex: 0 0 auto; width: 100%; max-width: 400px; }
+            .top-bar { flex-direction: column; gap: 10px; }
+            .top-bar .nav-links a { margin: 0 10px; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Thanh tiêu đề trên cùng -->
+    <!-- Thanh menu điều hướng -->
     <nav class="top-bar">
         <div class="brand">Portfolio - Ngô Hữu Phúc</div>
         <div class="nav-links">
-            <a href="index.html">Trang chủ</a>
+            <a href="index.html" class="active">Trang chủ</a>
             <a href="about.html">Giới thiệu</a>
             <a href="contact.html">Liên hệ</a>
         </div>
     </nav>
 
-    <!-- Banner xanh dương -->
     <header class="hero-banner">
         <h1>Ngô Hữu Phúc</h1>
     </header>
 
-    <!-- Phần thông tin chính -->
     <main class="profile-container">
         <div class="profile-photo">
-            <img src="anh-chan-dung.jpg" alt="Ngô HữuPhúc">
+            <img src="avatar.jpg" alt="Ảnh chân dung Ngô Hữu Phúc">
         </div>
         <div class="profile-details">
             <ul>
@@ -42,7 +71,5 @@
             </ul>
         </div>
     </main>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
