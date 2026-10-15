@@ -7,14 +7,27 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #ffffff; color: #212121; line-height: 1.6; }
+        
+        /* Thanh menu đen */
         .top-bar { background-color: #1c1c1c; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; }
         .top-bar .brand { color: #ffffff; font-size: 16px; font-weight: bold; }
         .top-bar .nav-links a { color: #cccccc; text-decoration: none; margin-left: 20px; font-size: 15px; transition: color 0.2s; }
         .top-bar .nav-links a:hover, .top-bar .nav-links a.active { color: #ffffff; font-weight: bold; }
-        .hero-banner { background: linear-gradient(135deg, #2b6cb0 0%, #1565c0 40%, #0d47a1 60%, #072a60 100%); height: 200px; display: flex; justify-content: center; align-items: center; text-align: center; }
-        .hero-banner h1 { color: #ffffff; font-family: Georgia, serif; font-size: 48px; letter-spacing: 1px; }
-        .content-box { max-width: 800px; margin: 50px auto; padding: 40px; text-align: center; background: #f9f9f9; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        
+        /* Banner xanh dương (đồng bộ với trang chủ) */
+        .hero-banner { background: linear-gradient(135deg, #2b6cb0 0%, #1565c0 40%, #0d47a1 60%, #072a60 100%); height: 250px; display: flex; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; }
+        .hero-banner::before { content: ''; position: absolute; bottom: -50px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; }
+        .hero-banner h1 { color: #ffffff; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 64px; font-weight: normal; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); z-index: 1; }
+        
+        /* Khung nội dung */
+        .content-container { max-width: 800px; margin: 50px auto; padding: 30px; }
+        .content-container ul { list-style: none; }
+        .content-container li { font-size: 18px; margin-bottom: 15px; padding-left: 20px; position: relative; }
+        /* Dấu chấm đầu dòng */
+        .content-container li::before { content: "•"; color: #0d47a1; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
+        
         @media (max-width: 768px) {
+            .hero-banner h1 { font-size: 40px; }
             .top-bar { flex-direction: column; gap: 10px; }
             .top-bar .nav-links a { margin: 0 10px; }
         }
@@ -29,12 +42,19 @@
             <a href="contact.html">Liên hệ</a>
         </div>
     </nav>
+
     <header class="hero-banner">
-        <h1>Giới thiệu bản thân</h1>
+        <h1>Giới Thiệu Bản Thân</h1>
     </header>
-    <main class="content-box">
-        <p style="font-size: 18px; margin-bottom: 20px;">Xin chào, mình là <strong>Ngô Hữu Phúc</strong>, sinh viên lớp 241A0107, khoa Công Nghệ Thông Tin thuộc trường Đại học Văn Hiến.</p>
-        <p style="font-size: 18px;">Mình có niềm đam mê mãnh liệt với lập trình Web (HTML, CSS, JavaScript) và thích chơi cầu lông vào thời gian rảnh để rèn luyện sức khỏe.</p>
+
+    <main class="content-container">
+        <ul>
+            <li>Sinh viên Khoa Công Nghệ Thông Tin - Trường Đại học Văn Hiến</li>
+            <li>Mã số sinh viên: 241A010368</li>
+            <li>Lớp: 241A0107</li>
+            <li>Định hướng: Lập trình Web (HTML5, CSS3, JavaScript ES6+)</li>
+            <li>Sở thích: Cầu lông, công nghệ và lập trình</li>
+        </ul>
     </main>
 </body>
 </html>
